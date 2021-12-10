@@ -68,8 +68,6 @@
 #     #introduction
 # def print_pause():    
 # pause
-# def fight():
-#     # Things that happen when the player fights  
 
 # def cave():
 #     # Things that happen to the player goes in the cave  
