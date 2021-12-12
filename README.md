@@ -64,8 +64,7 @@ With such a function, you could simply pass it a message to print, and it would 
 
 Here's another way you can use functions in a game like this—you can define a function for each place the player can go. In the example game, the code looks something like this:
 
-def fight():
-    # Things that happen when the player fights  
+ 
 
 def cave():
     # Things that happen to the player goes in the cave  
