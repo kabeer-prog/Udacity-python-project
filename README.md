@@ -16,7 +16,7 @@ The game also includes some random factors, so that it's a little different each
 The game has conditions for winning and losing.
 When the game is over, it asks if the player wants to play again.
 
-hese are the key features that your project will need to have in order to make it into a playable game. We'll go over each of them in more detail below.
+These are the key features that your project will need to have in order to make it into a playable game. We'll go over each of them in more detail below.
 
 As long as your program does all of the things listed in the instructions below, you are free to be as creative as you like!
 
@@ -154,7 +154,9 @@ Use intuitive function names and avoid generic names to provide clear context.
 Avoid using global variables in the functions.
 
 
-Arrived at this code modelling the elevator example:
+<!-- Arrived at this code modelling the elevator example: -->
+
+
 `import time
 import random
 items = []
