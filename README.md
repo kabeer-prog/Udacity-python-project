@@ -8,6 +8,9 @@ In order to build a program like this, we should first completely understand wha
 
 Note: Before doing this project, be sure to have completed the Style and Structure lesson in Intro to Python, Part 2.
 
+
+
+
 But for this project, the idea is to focus on some key things that we need if want to make a working game:
 
 The game gives players a description of what's happening, and then asks them to make a choice.
