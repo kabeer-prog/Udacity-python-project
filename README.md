@@ -11,8 +11,12 @@ In order to build a program like this, we should first completely understand wha
 
 Note: Before doing this project, be sure to have completed the Style and Structure lesson in Intro to Python, Part 2.
 
+FOUND inspiration Here:
+ELevator Example
+https://classroom.udacity.com/nanodegrees/nd000/parts/11c0a26d-77c7-4794-a3f0-7406d718f78f/modules/97fcf7ee-b909-41d0-9616-36bac33845e9/lessons/f6c0c7ac-759d-44f7-b026-2dce23774123/concepts/ccffd487-5099-48d7-a887-b9c412c3b571
 
-
+Method on List
+https://classroom.udacity.com/nanodegrees/nd000/parts/11c0a26d-77c7-4794-a3f0-7406d718f78f/modules/97fcf7ee-b909-41d0-9616-36bac33845e9/lessons/d04f3d5f-d7f9-4e45-9fd5-af4f5739a528/concepts/5729e844-1a24-4732-8336-2e3c2bd7e4bc
 
 But for this project, the idea is to focus on some key things that we need if want to make a working game:
 
