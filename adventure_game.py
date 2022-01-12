@@ -19,8 +19,10 @@ import random
 
 
 items = []
-enemy = random.choice(["wicked fairie", "pirate", "troll",
-                       "gorgon"])
+animal = ["lion", "tiger", "dragon", "snake", "crocodile"]
+
+# code picks a random animal from the array animal
+enemy = random.choice(animal)
 
 
 def print_pause(message_to_print):
@@ -108,12 +110,12 @@ def house(items, enemy):
 
 
 def play_again():
-    again = input("Would you like to play again? (y/n)").lower()
-    if again == "y":
-        print_pause("Excellent! Restarting the game ...")
-        play_game()
-    elif again == "n":
+    play = input("Would you like to play again? (y/n)").lower()
+    if play == "n":
         print_pause("Thanks for playing! See you next time.")
+    elif play == "y":
+        print_pause("Excellent! Restarting the game ...\n")
+        play_game()
 
 
 def play_game():
