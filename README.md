@@ -1,4 +1,4 @@
-# Udacity-python-project
+# Udacity-python-Based_Project
 Adventure Python Project
 ⚔️ Adventure game
 A. Project Overview
@@ -6,7 +6,13 @@ In this project, you'll make a simpler version of an old-fashioned text-based ad
 
 In order to build a program like this, we should first completely understand what it does. Take a notepad out, and play the game multiple times. The game will present you some scenarios and ask you to make one of 2 choices, by entering 1 or 2. In your notepad, record what happens each time you make a certain choice.
 
+
+
+
 Note: Before doing this project, be sure to have completed the Style and Structure lesson in Intro to Python, Part 2.
+
+
+
 
 But for this project, the idea is to focus on some key things that we need if want to make a working game:
 
@@ -16,7 +22,7 @@ The game also includes some random factors, so that it's a little different each
 The game has conditions for winning and losing.
 When the game is over, it asks if the player wants to play again.
 
-hese are the key features that your project will need to have in order to make it into a playable game. We'll go over each of them in more detail below.
+These are the key features that your project will need to have in order to make it into a playable game. We'll go over each of them in more detail below.
 
 As long as your program does all of the things listed in the instructions below, you are free to be as creative as you like!
 
@@ -64,8 +70,7 @@ With such a function, you could simply pass it a message to print, and it would 
 
 Here's another way you can use functions in a game like this—you can define a function for each place the player can go. In the example game, the code looks something like this:
 
-def fight():
-    # Things that happen when the player fights  
+ 
 
 def cave():
     # Things that happen to the player goes in the cave  
@@ -155,7 +160,9 @@ Use intuitive function names and avoid generic names to provide clear context.
 Avoid using global variables in the functions.
 
 
-Arrived at this code modelling the elevator example:
+<!-- Arrived at this code modelling the elevator example: -->
+
+
 `import time
 import random
 items = []
