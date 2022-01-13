@@ -1,28 +1,8 @@
-#  CODE REFACTORED INTO THE VARIOUS FUNCTIONS
-#  def intro():
-#     #introduction
-# def print_pause():
-# # pause
-
-# def cave():
-# Things that happen to the player goes in the cave
-#  def field():
-#     # Things that happen when the player runs back to the field
-
-# def house():
-#     pycodestyle Udacity.pyThings that happen to the player in the house
-# def play_again():
-
-
 import time
 import random
 
-
-items = []
-animal = ["lion", "tiger", "dragon", "snake", "crocodile"]
-
-# code picks a random animal from the array animal
-enemy = random.choice(animal)
+danger = random.choice(["bandit", "terrorist"])
+tools = []
 
 
 def print_pause(message_to_print):
@@ -30,98 +10,109 @@ def print_pause(message_to_print):
     time.sleep(1)
 
 
-def intro(enemy):
-    print_pause("You find yourself standing in an open field,"
-                " filled with grass,and yellow wildflowers")
-    print_pause("Rumor has it that a " + enemy + " is somewhere "
-                " around here and has been terrifying the nearby village.")
-    print_pause("In front of you is a house")
-    print_pause("To your right is a dark cave")
-    print_pause("In your hand you hold your trusty "
-                "(but not very effective) dagger.\n")
+def intro():
+    print_pause("You are travelling to the neighbouring country of Niger.")
+    print_pause("You were filled with excitement about you visiting a " +
+                "new place")
+    print_pause("Unfortunately, your car broke down in a thick" +
+                "forest where no one lives")
+    print_pause("At the same time, this happens to be the dreadful " +
+                "Sambisa Forest,"+"common with " + danger + " !")
+    print_pause("You've got either of two decisions to save yourself " +
+                "from the mess.")
+    print_pause("1) Repair the car or \n 2) Stay and not make an effort")
+    option()
 
 
-def field(items, enemy):
-    print_pause("Enter 1 to knock on the door of the house.")
-    print_pause("Enter 2 to peer into the cave.")
-    print_pause("What would you like to do?")
-    room = input("please enter 1 or 2\n")
-    if room == '1':
-        house(items, enemy)
-    elif room == '2':
-        cave(items, enemy)
+def option():
+    choice = input("Enter stay or repair?").lower()
+    if (choice == "stay"):
+        stay()
+    elif (choice == "repair"):
+        repair()
+    else:
+        print("Enter correct option\n")
+        option()
 
 
-def cave(items, enemy):
-    # Things that happen to the player goes in the cave
-    print_pause("You peer cautiously into the cave.")
-    if "sword" in items:
-        print_pause("You've been here before, and gotten all"
-                    " the good stuff. It's just an empty cave now.")
-        print_pause("You walk back out to the field.\n")
-        field(items, enemy)
-    elif "sword" not in items:
-        print_pause("It turns out to be only a very small cave.")
-        print_pause("Your eye catches a glint of metal behind a rock.")
-        print_pause("You have found the magical Sword of Ogoroth!")
-        print_pause("You discard your silly old dagger and"
-                    " take the sword with you.")
-        print_pause("You walk back out to the field.\n")
-    items.append("sword")
-    field(items, enemy)
+def stay():
+    print_pause("You heard steps of someone running towards " +
+                "the road from the forest")
+    print_pause("Few minutes after, a man who appears to be a captive of " +
+                danger + ", came ot of the forest ")
+    print_pause("He mentioned he was kidnaped by " +
+                danger + " few weeks back.")
+    print_pause("He wants your help from the " + danger + 's' + " attack")
+    print_pause("Would you like to (1) wait and fight them " +
+                "(2) hide away in the forest")
+    choice2 = input("Enter 1 or 2\n")
+    if choice2 == "1" and "rifle" in tools:
+        print_pause("As you waited for what will happen next")
+        print_pause("You remembered the rifle you took from " +
+                    "the boot moment before")
+        print_pause("a soldier of " + danger + " appeared")
+        print_pause("You shot the " + danger)
+        print_pause("You are happy to save a life")
+        one_more_time()
+    elif choice2 == "1" and "rifle " not in tools:
+        print_pause("A soldier of " + danger + " appeared")
+        print_pause("He capture you")
+        print_pause("You lost from the journey as you had nothing " +
+                    "to save yourself")
+        one_more_time()
+    elif choice2 == "2":
+        hide()
 
 
-def house(items, enemy):
-    # Things that happen to the player in the house
-    print_pause("You approach the door of the house.")
-    print_pause("You are about to knock when the door opens and"
-                " out steps a " + enemy + ".")
-    print_pause("Eep! This is the " + enemy + 's' + " house!")
-    print_pause("The " + enemy + " attacks you!")
-    if "sword" in items:
-        response2 = input("Would you like to (1) fight or (2) run away?")
-        if response2 == "1":
-            print_pause("As the " + enemy + " moves to attack,"
-                        "you unsheath your new sword.")
-            print_pause("The Sword of Ogoroth shines brightly"
-                        " in your hand as you brace yourself for the attack.")
-            print_pause("But the " + enemy + " takes one look at"
-                        " your shiny new toy and runs away!")
-            print_pause("You have rid the town of the " + enemy +
-                        " .You are victorious!")
-            play_again()
-        elif response2 == "2":
-            print_pause("You run back into the field. "
-                        "Luckily, you don't seem to have been followed.\n")
-            field()
-    elif "sword" not in items:
-        print_pause("You feel a bit under-prepared for this,"
-                    " what with only having a tiny dagger.")
-        response2 = input("Would you like to (1) fight or (2) run away?")
-        if response2 == "1":
-            print_pause("You do your best...")
-            print_pause("but your dagger is no match for the dragon.")
-            print_pause("You have been defeated!")
-            play_again()
-        elif response2 == "2":
-            print_pause("You run back into the field. Luckily,"
-                        " you don't seem to have been followed.\n")
-            field(items, enemy)
+def hide():
+    print_pause("You observed to know if it is safe to return to your car")
+    print_pause("You took caution and was successful")
+    one_more_time()
 
 
-def play_again():
-    play = input("Would you like to play again? (y/n)").lower()
+def repair():
+    print_pause("You opened the bonnet")
+    print_pause("You tried cautiously to examine the fault.")
+    print_pause("it appears that an ignition plug is off " +
+                "its position and needs to be tightened")
+    print_pause("You need a spanner to do the job")
+    print_pause("You proceeded to the boot of the car")
+    boot()
+
+
+def boot():
+    print_pause("You open the boot in search of the spanner")
+    if "spanner" in tools:
+        print_pause("You've gotten the spanner ")
+        print_pause("You went back to the car's bonnet\n")
+        work()
+    elif "spanner" not in tools:
+        print_pause("As you were searching the tool box in the bonnet.")
+        print_pause("You discovered a rifle youu bought, long time ago")
+        print_pause("You took it, and placed it under your shirt in " +
+                    "case of attack")
+        print_pause("You also found the sppanner you are looking for")
+    tools.append("spanner")
+    tools.append("rifle")
+    work()
+
+
+def work():
+    print_pause("You tightened the plug and it worked")
+    stay()
+
+
+def one_more_time():
+    play = input("Would you like to go through the journey again (y/n)").lower()
     if play == "n":
-        print_pause("Thanks for playing! See you next time.")
+        print_pause("Thanks for your time!!! See you next time.")
     elif play == "y":
-        print_pause("Excellent! Restarting the game ...\n")
+        print_pause("Restarting the game!!!! ...\n")
         play_game()
 
 
 def play_game():
-
-    intro(enemy)
-    field(items, enemy)
+    intro()
 
 
 play_game()
