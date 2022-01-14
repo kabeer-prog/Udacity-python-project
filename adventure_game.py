@@ -111,9 +111,8 @@ def valid_input(prompt, options):
 
 
 def one_more_time():
-    
     play = valid_input("Would you like to go through the " +
-                 "journey again (y/n)", ['y', 'n']).lower()
+                       "journey again (y/n)", ['y', 'n']).lower()
     if play == "n":
         print_pause("Thanks for your time!!! See you next time.")
     elif play == "y":
@@ -122,7 +121,6 @@ def one_more_time():
 
 
 def play_game():
-    
     dangers = ["bandit", "terrorist"]
     danger = random.choice(dangers)
     tools = []
