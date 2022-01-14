@@ -12,7 +12,7 @@ def print_pause(message_to_print, pause=2):
     time.sleep(pause)
 
 
-def intro():
+def intro(danger,tools):
     print_pause("You are travelling to the neighbouring country of Niger.")
     print_pause("You were filled with excitement about you visiting a " +
                 "new place")
@@ -23,18 +23,18 @@ def intro():
     print_pause("You've got either of two decisions to save yourself " +
                 "from the mess.")
     print_pause("1) Repair the car or \n 2) Stay and not make an effort")
-    option()
+    option(danger,tools)
 
 
-def option():
+def option(danger,tools):
     choice = valid_input("Enter stay or repair?", ["stay", "repair"])
     if (choice == "stay"):
-        stay()
+        stay(danger,tools)
     elif (choice == "repair"):
-        repair()
+        repair(danger,tools)
 
 
-def stay():
+def stay(danger,tools):
     print_pause("You heard steps of someone running towards " +
                 "the road from the forest")
     print_pause("Few minutes after, a man who appears to be a captive of " +
@@ -79,7 +79,7 @@ def repair():
     boot()
 
 
-def boot():
+def boot(tools):
     print_pause("You open the boot in search of the spanner")
     if "spanner" in tools:
         print_pause("You've gotten the spanner ")
@@ -117,14 +117,14 @@ def one_more_time():
         print_pause("Thanks for your time!!! See you next time.")
     elif play == "y":
         print_pause("Restarting the game!!!! ...\n", 5)
-        play_game()
+        play_game(danger,tools)
 
 
-def play_game():
+def play_game(danger, tools):
     dangers = ["bandit", "terrorist"]
     danger = random.choice(dangers)
     tools = []
-    intro(danger, tools)
+    intro(danger,tools)
 
 
-play_game()
+play_game(danger, tools)
