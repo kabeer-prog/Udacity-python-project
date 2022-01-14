@@ -124,7 +124,7 @@ def play_game():
     dangers = ["bandit", "terrorist"]
     danger = random.choice(dangers)
     tools = []
-    intro()
+    intro(danger, tools)
 
 
 play_game()
