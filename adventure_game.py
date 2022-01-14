@@ -1,11 +1,13 @@
 import time
 import random
+from urllib import response
 
-danger = random.choice(["bandit", "terrorist"])
+dangers = ["bandit", "terrorist"]
+danger = random.choice(dangers)
 tools = []
 
 
-def print_pause(message_to_print):
+def print_pause(message_to_print, pause=2):
     print(message_to_print)
     time.sleep(1)
 
@@ -25,14 +27,11 @@ def intro():
 
 
 def option():
-    choice = input("Enter stay or repair?").lower()
+    choice = valid_input("Enter stay or repair?", ["stay", "repair"])
     if (choice == "stay"):
         stay()
     elif (choice == "repair"):
         repair()
-    else:
-        print("Enter correct option\n")
-        option()
 
 
 def stay():
@@ -45,7 +44,7 @@ def stay():
     print_pause("He wants your help from the " + danger + 's' + " attack")
     print_pause("Would you like to (1) wait and fight them " +
                 "(2) hide away in the forest")
-    choice2 = input("Enter 1 or 2\n")
+    choice2 = valid_input("Enter 1 or 2\n", ['1', '2'])
     if choice2 == "1" and "rifle" in tools:
         print_pause("As you waited for what will happen next")
         print_pause("You remembered the rifle you took from " +
@@ -102,12 +101,22 @@ def work():
     stay()
 
 
+def valid_input(prompt, options):
+    response = input(prompt).lower()
+    if response in options:
+        return response
+    else:
+        print("Please select a correct input")
+        return valid_input(prompt, options)
+
+
 def one_more_time():
-    play = input("Would you like to go through the journey again (y/n)").lower()
+    play = input("Would you like to go through the " +
+                 "journey again (y/n)").lower()
     if play == "n":
         print_pause("Thanks for your time!!! See you next time.")
     elif play == "y":
-        print_pause("Restarting the game!!!! ...\n")
+        print_pause("Restarting the game!!!! ...\n", 5)
         play_game()
 
 
