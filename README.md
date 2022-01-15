@@ -1,12 +1,13 @@
 # Udacity-python-Based_Project
 Adventure Python Project
 ⚔️ Adventure game
+ A simple adventure game that take users input to determine what happens to them according to the inputs. 
+A loss or win case is also embedded in the game
+
 A. Project Overview
 In this project, you'll make a simpler version of an old-fashioned text-based adventure game. You can find an example in the workspace below. Try it out to get a feeling for how the game works!
 
 In order to build a program like this, we should first completely understand what it does. Take a notepad out, and play the game multiple times. The game will present you some scenarios and ask you to make one of 2 choices, by entering 1 or 2. In your notepad, record what happens each time you make a certain choice.
-
-
 
 
 Note: Before doing this project, be sure to have completed the Style and Structure lesson in Intro to Python, Part 2.
