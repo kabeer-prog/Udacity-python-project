@@ -52,34 +52,34 @@ def stay(danger, tools):
         print_pause("a soldier of " + danger + " appeared")
         print_pause("You shot the " + danger)
         print_pause("You are happy to save a life")
-        one_more_time()
+        one_more_time(danger, tools)
     elif choice2 == "1" and "rifle " not in tools:
         print_pause("A soldier of " + danger + " appeared")
         print_pause("He capture you")
         print_pause("You lost from the journey as you had nothing " +
                     "to save yourself")
-        one_more_time()
+        one_more_time(danger, tools)
     elif choice2 == "2":
-        hide()
+        hide(danger, tools)
 
 
-def hide():
+def hide(danger, tools):
     print_pause("You observed to know if it is safe to return to your car")
     print_pause("You took caution and was successful")
     one_more_time()
 
 
-def repair():
+def repair(danger, tools):
     print_pause("You opened the bonnet")
     print_pause("You tried cautiously to examine the fault.")
     print_pause("it appears that an ignition plug is off " +
                 "its position and needs to be tightened")
     print_pause("You need a spanner to do the job")
     print_pause("You proceeded to the boot of the car")
-    boot()
+    boot(danger, tools)
 
 
-def boot(tools):
+def boot(danger, tools):
     print_pause("You open the boot in search of the spanner")
     if "spanner" in tools:
         print_pause("You've gotten the spanner ")
@@ -93,12 +93,12 @@ def boot(tools):
         print_pause("You also found the sppanner you are looking for")
     tools.append("spanner")
     tools.append("rifle")
-    work()
+    work(danger, tools)
 
 
-def work():
+def work(danger, tools):
     print_pause("You tightened the plug and it worked")
-    stay()
+    stay(danger, tools)
 
 
 def valid_input(prompt, options):
@@ -110,7 +110,7 @@ def valid_input(prompt, options):
         return valid_input(prompt, options)
 
 
-def one_more_time():
+def one_more_time(danger, tools):
     play = valid_input("Would you like to go through the " +
                        "journey again (y/n)", ['y', 'n']).lower()
     if play == "n":
