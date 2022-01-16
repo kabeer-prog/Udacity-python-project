@@ -1,6 +1,9 @@
 # Udacity-python-Based_Project
+
 Adventure Python Project
+
 ⚔️ Adventure game
+
  A simple adventure game that take users input to determine what happens to them according to the inputs. 
 A loss or win case is also embedded in the game
 
