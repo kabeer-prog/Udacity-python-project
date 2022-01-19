@@ -1,6 +1,9 @@
 # Udacity-python-Based_Project
+
 Adventure Python Project
+
 ⚔️ Adventure game
+
  A simple adventure game that take users input to determine what happens to them according to the inputs. 
 A loss or win case is also embedded in the game
 
@@ -60,6 +63,8 @@ In the example game, each time we make a choice, something happens, and we are o
 If the player knocks on the door of the house, what happens?
 If the player enters the cave, what happens?
 We will be dealing with subsequent choices after the first choice in the upcoming steps.
+
+
 
 4. Make sure the player gives a valid input
 Up till now, our program prints a description of the game-world to the player, gives them a choice, and prints what happens depending on their choice. An important thing to notice in the example game is that if the player enters something other than 1 or 2, the game keeps asking them for a 1 or 2. We don't want the game to accept invalid input, like 75 or foo!
