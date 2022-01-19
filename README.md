@@ -110,7 +110,7 @@ Eventually, the game should come to an end—and tell the player that they won o
 
 The end result of the game should be influenced by the player's choices (and possibly some degree of randomness as well). Generally, it's a good idea to use randomness to only partially influence the outcome. If what happens to the player is completely random, the player will feel out of control and probably won't enjoy it.
 
-For example, in our example game, the player fights the enemy creature. If they win the fight, they win the game!
+For example, in the  example game of the course, the player fights the enemy creature. If they win the fight, they win the game!
 
 8. Check if the player wants to play again
 When Python gets to the end of your script, it will exit back to the terminal. But that's not a good player experience. Instead, it would be better if the game asked the player whether they want to play again:
